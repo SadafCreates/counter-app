@@ -1,18 +1,21 @@
 import { useState } from 'react';
 import './counter.css';
+import Button from './components/Button';
 
  function Counter(){
 const [count , setCount] = useState(0);
 
-function increment(){
+function incrementHandler(){
     setCount(count + 1);
 };
+
+
 return(
     <>
     <div className="content">
     <h1>Counter App</h1>
     <h2>{count}</h2>
-    <button onClick={increment}>Increment</button>
+    <Button label ='increment' onClick={incrementHandler} />
     </div>
     </>
 )
