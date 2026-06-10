@@ -4,6 +4,7 @@ import Button from './components/Button';
 
  function Counter(){
 const [count , setCount] = useState(0);
+let hasCount = count > 0; 
 
 function incrementHandler(){
     setCount(count + 1);
@@ -11,7 +12,12 @@ function incrementHandler(){
 
 function decrementHandler(){
     setCount(count-1);
-}
+};
+
+function resetHandler(){
+    setCount(0);
+};
+
 
 
 return(
@@ -21,6 +27,7 @@ return(
     <h2>{count}</h2>
     <Button label ='Increment' onClick={incrementHandler} />
     <Button label = 'decrement' onClick={decrementHandler}/>
+    <Button label = "Reset" onClick= {resetHandler} disabled={!hasCount} />
     </div>
     </>
 )
