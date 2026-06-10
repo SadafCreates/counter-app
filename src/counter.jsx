@@ -9,13 +9,18 @@ function incrementHandler(){
     setCount(count + 1);
 };
 
+function decrementHandler(){
+    setCount(count-1);
+}
+
 
 return(
     <>
     <div className="content">
     <h1>Counter App</h1>
     <h2>{count}</h2>
-    <Button label ='increment' onClick={incrementHandler} />
+    <Button label ='Increment' onClick={incrementHandler} />
+    <Button label = 'decrement' onClick={decrementHandler}/>
     </div>
     </>
 )
